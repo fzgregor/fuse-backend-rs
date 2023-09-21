@@ -580,7 +580,6 @@ fn fuse_fusermount_umount(mountpoint: &str, fusermount: &str) -> Result<()> {
     match std::process::Command::new(fusermount)
         .arg("--unmount")
         .arg("--quiet")
-        .arg("--lazy")
         .arg("--")
         .arg(mountpoint)
         .status()
